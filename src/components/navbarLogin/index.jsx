@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../assets/Brand.png";
+import logo from "../../assets/Brand.jpg"
 import { CgProfile } from "react-icons/cg";
 import { BsCart } from "react-icons/bs";
 import { GrNotification } from "react-icons/gr";
