@@ -1,0 +1,348 @@
+/* ============== Navbar=========== */
+#navbar .navbar {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 6px 40px 0px #adadad40;
+}
+
+#navbar .category {
+  color: white;
+  margin-left: 20px;
+}
+#navbar .search {
+  width: auto;
+  border-radius: 20px;
+  border-color: #9b9b9b;
+  margin-left: 250px;
+}
+
+#navbar .search::placeholder {
+  color: #9b9b9b;
+  padding-left: 10px;
+}
+
+#navbar .iconSearch {
+  margin-left: -30px;
+  color: #9b9b9b;
+}
+
+#navbar .logo-shopid {
+  width: 130px;
+}
+
+#navbar .filter {
+  font-size: 20px;
+  color: #9b9b9b;
+  margin-left: 20px;
+  margin-right: 60px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  border-color: #9b9b9b;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+}
+
+#navbar .cart {
+  font-size: 24px;
+  color: #9b9b9b;
+  margin: 0 20px;
+}
+#navbar .login {
+  width: 100px;
+  height: 36px;
+  color: white;
+  background-color: #009393;
+  margin: 0 20px;
+  padding: 5px;
+}
+#navbar .login:hover {
+  color: white;
+  background-color: #14adad;
+}
+
+#navbar .register {
+  width: 100px;
+  height: 36px;
+  color: #9b9b9b;
+  border: 1px solid;
+  border-color: #9b9b9b;
+  padding: 5px;
+}
+
+#navbar .register:hover {
+  color: white;
+  background-color: #9b9b9b;
+}
+
+@media screen and (max-width: 499px) {
+  #navbar .search {
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  #navbar .iconSearch {
+    display: none;
+  }
+
+  #navbar .filter {
+    display: none;
+  }
+
+  #navbar .wrap {
+    margin-top: 10px;
+  }
+}
+/* ============== end Navbar =========== */
+
+/* ============== Card =================== */
+#card .container {
+}
+
+#card .title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#card .title-text {
+  font-weight: bold;
+}
+
+#card .subtitle {
+  color: #9b9b9b;
+}
+
+#card .product-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#card .card {
+  width: 300px;
+  margin: 5px;
+}
+
+#card .see-all-button {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+#card .card-img-top {
+  width: 300px;
+}
+
+#card .card-body {
+}
+
+#card .pagination {
+}
+
+#card .btn {
+}
+
+/* ================== Card End ================ */
+
+/* ================== Category ================ */
+
+/* ================== Category End ================== */
+
+/* ================== Discount ================ */
+
+#discount .product-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#discount .title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#discount .subtitle {
+  color: #9b9b9b;
+}
+
+#discount .card {
+  width: 300px;
+  margin: 5px;
+}
+
+#discount .see-all-button {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+/* ================== Discount End ============== */
+
+/* ================ Navbar Login ============ */
+.icon-link {
+  margin-right: 10px; /* Adjust the value to control the spacing */
+}
+
+/* ================ Navbar End ===============*/
+
+/* ============== Carousel =========== */
+
+
+/* ============== End Carousel =========== */
+
+/* =============== createProduct =============== */
+
+#createProduct .wrapImage {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+/* Style for the preview image */
+#createProduct .preview {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 3cap;
+}
+
+/* Style for the "Upload Photo" button */
+#createProduct .btnUpload {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #11abaa;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+  margin-left: 3ch;
+}
+
+#createProduct .btnUpload:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the file input (hidden) */
+.file {
+  display: none;
+}
+
+/* =============== end createProduct ============ */
+
+/* ============== cart =========== */
+#cart .container {
+  margin-top: 120px;
+}
+#cart .cardKiri {
+  width: 720px;
+  height: 64px;
+  justify-content: center;
+}
+#cart .cardOrder {
+  width: 720px;
+  height: 126px;
+  justify-content: center;
+}
+#cart .wrapTitle {
+  width: 250px;
+}
+#cart .wrapInput {
+  padding-left: 50px;
+}
+
+#cart .btnMinus,
+#cart .btnPlus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+
+#cart .input {
+  margin: 0 5px;
+  text-align: center;
+  border: none;
+  width: 36px;
+  height: 36px;
+}
+
+#cart .cardKanan {
+  width: 370px;
+  height: 180px;
+}
+
+#cart .btnBuy {
+  width: 100%;
+  height: 36px;
+  border-radius: 25px;
+  color: white;
+  background-color: #11abaa;
+}
+
+#cart .btnBuy:hover {
+  color: white;
+  background-color: #076767;
+}
+
+#cart input[type="checkbox"]:checked {
+  background-color: #11abaa;
+  border: #11abaa;
+}
+
+@media screen and (max-width: 500px) {
+  #cart .container {
+    margin-top: 100px;
+  }
+  #cart .cardKiri {
+    width: 100%;
+  }
+  #cart .cardOrder {
+    width: 100%;
+  }
+  #cart .wrapTitle {
+    width: 100%;
+    font-size: 12px;
+  }
+  #cart .price {
+    font-size: 12px;
+  }
+
+  #cart .wrapInput {
+    padding-left: 20px;
+  }
+  #cart .btnMinus,
+  #cart .btnPlus {
+    width: 26px;
+    height: 26px;
+  }
+
+  #cart .input {
+    margin: 0;
+    width: 26px;
+    height: 26px;
+  }
+
+  #cart .wrapTitle {
+    width: 180px;
+  }
+  #cart .cardKanan {
+    width: 100%;
+    height: 180px;
+  }
+  #cart .btnBuy {
+    width: 100%;
+  }
+  #cart .wrap {
+    width: 130px;
+  }
+}
+/* ============== end cart =========== */

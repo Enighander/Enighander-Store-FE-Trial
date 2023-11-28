@@ -1,0 +1,26 @@
+
+/* Main grid container */
+  #category-main .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid columns */
+    gap: 20px; /* Gap between grid items */
+  }
+  
+  /* Category item */
+  #category-main .category-item {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #category-main .category-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #category-main .category-item img:hover {
+    transform: scale(1.05);
+  }
