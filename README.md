@@ -104,4 +104,4 @@ Contributions are what make the open source community such an amazing place to b
 
 :rocket: [`Frontend E-Store EnighStore Shop`](https://github.com/Enighander/Enighander-Store-FE-Trial)
 
-:rocket: [`Demo E-Store Enigh Store Online Shop`](https://enighander-store-fe-trial.vercel.app/home)
+:rocket: [`Demo E-Store Enigh Store Online Shop`](https://enighander-store-fe-trial.vercel.app)
