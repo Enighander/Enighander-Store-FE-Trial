@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "src/main.jsx",
-        "use": "@vercel/vite"
+        "src": "index.html",
+        "use": "@vercel/static-build"
       }
     ],
-    "routes": [
+    "rewrites": [
       {
-        "src": "/(.*)",
-        "dest": "/"
+        "source": "/(.*)",
+        "destination": "/index.html"
       }
     ]
   }
