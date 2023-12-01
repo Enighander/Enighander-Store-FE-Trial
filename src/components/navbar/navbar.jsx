@@ -44,14 +44,6 @@ const Navbar = () => {
                 <button className="login btn rounded-pill">
                   <Link
                     style={{ color: "inherit", textDecoration: "none", fontWeight: "bold" }}
-                    to={"/admin"}
-                  >
-                    Admin
-                  </Link>
-                </button>
-                <button className="login btn rounded-pill">
-                  <Link
-                    style={{ color: "inherit", textDecoration: "none", fontWeight: "bold" }}
                     to={"/login"}
                   >
                     Login
