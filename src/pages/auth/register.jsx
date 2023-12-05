@@ -7,7 +7,6 @@ import "sweetalert2/dist/sweetalert2.css";
 import axios from "axios";
 
 const Register = () => {
-
   const navigate = useNavigate();
 
   let [userData, setUserData] = useState({
@@ -52,13 +51,21 @@ const Register = () => {
       });
       navigate("/login");
     } catch (error) {
-      console.error("register error:", error);
-      Swal.fire({
-        icon: "error",
-        title: "Registration Error",
-        text: "An error occurred during registration. Please try again later.",
-      });
-      return;
+      console.error("register error:", error.response.data);
+      if (error.response && error.response.data && error.response.data.error) {
+        const errorMessage = error.response.data.error;
+        Swal.fire({
+          icon: "error",
+          title: "Format Error",
+          text: errorMessage,
+        })
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Registration Error",
+          text: "An error occurred during registration. Please try again later.",
+        });
+      }
     }
   };
 
