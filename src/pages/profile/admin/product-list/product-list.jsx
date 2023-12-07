@@ -97,20 +97,6 @@ const ProductList = () => {
                     All Items
                   </button>
                 </li>
-                <li className="nav-item" role="presentation">
-                  <button
-                    className="nav-link"
-                    id="pills-profile-tab"
-                    data-toggle="pill"
-                    data-target="#pills-profile"
-                    type="button"
-                    role="tab"
-                    aria-controls="pills-profile"
-                    aria-selected="false"
-                  >
-                    Sold out
-                  </button>
-                </li>
               </ul>
               <div
                 style={{
@@ -167,7 +153,7 @@ const ProductList = () => {
                             className=" img-fluid mr-3"
                             src={item.image}
                             crossOrigin="anonymous"
-                            alt="cloth"
+                            alt="items"
                             style={{
                               width: "200px",
                               maxHeight: "136px",

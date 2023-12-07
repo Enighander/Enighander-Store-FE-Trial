@@ -256,7 +256,7 @@ const OrderList = () => {
                           className=" img-fluid mr-3"
                           src={item.image}
                           crossOrigin="anonymous"
-                          alt="cloth"
+                          alt="items"
                           style={{
                             width: "200px",
                             maxHeight: "136px",

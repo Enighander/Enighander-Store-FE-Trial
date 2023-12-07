@@ -68,7 +68,6 @@ const Admin = () => {
     formDataToSend.append("username", data.username);
     formDataToSend.append("email", data.email);
     formDataToSend.append("phone", data.phone);
-    // formDataToSend.append("address", data.address);
     // formDataToSend.append("image", data.image);
 
     try {
@@ -115,13 +114,13 @@ const Admin = () => {
                     <div className="p-3 text-white">
                       <form>
                         <div className="form-group">
-                          <label htmlFor="storeName" className="text-dark">
+                          <label htmlFor="username" className="text-dark">
                             Username
                           </label>
                           <input
                             type="text"
                             className="form-control"
-                            id="storeName"
+                            id="username"
                             name="username"
                             placeholder="Enter Username"
                             onChange={handleChange}
@@ -142,34 +141,6 @@ const Admin = () => {
                             value={data.email}
                           />
                         </div>
-                        <div className="form-group">
-                          <label htmlFor="phoneNumber" className="text-dark">
-                            Phone Number
-                          </label>
-                          <input
-                            type="tel"
-                            className="form-control"
-                            id="phoneNumber"
-                            name="phone"
-                            placeholder="Enter phone number"
-                            onChange={handleChange}
-                            value={data.phone}
-                          />
-                        </div>
-                        {/* <div className="form-group">
-                          <label htmlFor="address" className="text-dark">
-                            Address
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            id="address"
-                            name="address"
-                            placeholder="Enter Address"
-                            onChange={handleChange}
-                            value={data.address}
-                          />
-                        </div> */}
                         <button
                           type="submit"
                           className="btn mt-5"
