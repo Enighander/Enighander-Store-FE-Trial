@@ -154,7 +154,16 @@ const CreateProduct = () => {
                           className="preview"
                         />
                       ) : (
-                        <div className="preview"></div>
+                        <div
+                          className="preview"
+                          style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                          }}
+                        >
+                          500x500
+                        </div>
                       )}
                       <div className="form-group">
                         <label htmlFor="fileInput" className="btn btnUpload">

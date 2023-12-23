@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { BiLogOut } from "react-icons/bi";
 import { MdAccountBox, MdOutlineCreateNewFolder, MdFeaturedPlayList } from "react-icons/md";
 import { FaRegAddressBook } from "react-icons/fa";
+import Swal from "sweetalert2";
 import axios from "axios";
 
 const SidebarAdmin = () => {
@@ -29,8 +30,19 @@ const SidebarAdmin = () => {
   }, [adminId]);
 
   const handleLogout = () => {
-    localStorage.clear();
-    navigate("/");
+    Swal.fire({
+      title: "Are You Sure?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.clear();
+        navigate("/");
+      }
+    });
   };
 
   return (

@@ -10,10 +10,9 @@ const User = () => {
     username: "",
     email: "",
     phone: "",
-    // address: "",
-    image: null,
+    image_profile: null,
   });
-  const [previewImage, setPreviewImage] = useState(data.image);
+  const [previewImage, setPreviewImage] = useState("");
 
   useEffect(() => {
     if (userId) {
@@ -21,14 +20,8 @@ const User = () => {
         .get(`${import.meta.env.VITE_REACT_APP_API_URL}/user/${userId}`)
         .then((response) => {
           const userData = response.data.data[0];
-          setData({
-            username: userData.username,
-            email: userData.email,
-            phone: userData.phone,
-            // address: userData.address,
-            // image: userData.image,
-          });
-          setPreviewImage(userData.image);
+          setData(userData);
+          setPreviewImage(userData.image_profile);
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
@@ -47,7 +40,7 @@ const User = () => {
     const selectedFile = event.target.files[0];
     setData({
       ...data,
-      image: selectedFile,
+      image_profile: selectedFile,
     });
 
     const reader = new FileReader();
@@ -58,7 +51,7 @@ const User = () => {
     if (selectedFile) {
       reader.readAsDataURL(selectedFile);
     } else {
-      setPreviewImage(null);
+      setPreviewImage("");
     }
   };
 
@@ -68,12 +61,10 @@ const User = () => {
     formDataToSend.append("username", data.username);
     formDataToSend.append("email", data.email);
     formDataToSend.append("phone", data.phone);
-    // formDataToSend.append("address", data.address);
-    // formDataToSend.append("image", data.image);
-
+    formDataToSend.append("image_profile", data.image_profile);
     try {
-      const response = await axios
-      .put(`${import.meta.env.VITE_REACT_APP_API_URL}/user/${userId}`,
+      const response = await axios.put(
+        `${import.meta.env.VITE_REACT_APP_API_URL}/user/${userId}`,
         formDataToSend
       );
       Swal.fire({
@@ -82,7 +73,21 @@ const User = () => {
       });
       console.log("Update successful", response);
     } catch (error) {
-      console.log("Error updating data", error);
+      console.error("Update User Error:", error.response.data);
+      if (error.message && error.response.data && error.response.data.error) {
+        const errorMessage = error.response.data.error;
+        Swal.fire({
+          icon: "error",
+          title: "Format Error",
+          text: errorMessage,
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Update User Error",
+          text: "An error occurred during update user. Please try again later.",
+        });
+      }
     }
   };
 
@@ -101,9 +106,9 @@ const User = () => {
             backgroundColor: "#F5F5F5",
           }}
         >
-        <div
+          <div
             className="card"
-            style={{ width: 850, height: 'auto', backgroundColor: "white" }}
+            style={{ width: 850, height: "auto", backgroundColor: "white" }}
           >
             <div style={{ padding: 30 }}>
               <h5 className="font-weight-bold">My Profile</h5>
@@ -156,20 +161,6 @@ const User = () => {
                             value={data.phone}
                           />
                         </div>
-                        {/* <div className="form-group">
-                          <label htmlFor="address" className="text-dark">
-                            Address
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            id="address"
-                            name="address"
-                            placeholder="Enter Address"
-                            onChange={handleChange}
-                            value={data.address}
-                          />
-                        </div> */}
                         <button
                           type="submit"
                           className="btn mt-5"
@@ -194,7 +185,7 @@ const User = () => {
                           borderRadius: "50%",
                           objectFit: "cover",
                         }}
-                        src={previewImage || data.image}
+                        src={previewImage || data.image_profile}
                         alt="Profile"
                       />
                       <div className="form-group">
