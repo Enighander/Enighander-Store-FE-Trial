@@ -58,7 +58,7 @@ const Register = () => {
           icon: "error",
           title: "Format Error",
           text: errorMessage,
-        })
+        });
       } else {
         Swal.fire({
           icon: "error",

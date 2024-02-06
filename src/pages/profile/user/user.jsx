@@ -1,77 +1,55 @@
 import React, { useEffect, useState } from "react";
 import NavbarLogin from "../../../components/navbarLogin";
 import SidebarUser from "../../../components/sidebarUser/sidebarUser";
+import ModalUploadUserImage from "../../../components/modalUploadProfileUser/modal-upload-profile";
 import axios from "axios";
 import Swal from "sweetalert2";
 
 const User = () => {
   const userId = localStorage.getItem("userId");
-  const [data, setData] = useState({
-    username: "",
-    email: "",
-    phone: "",
-    image_profile: null,
-  });
+  const [data, setData] = useState([]);
   const [previewImage, setPreviewImage] = useState("");
 
   useEffect(() => {
-    if (userId) {
-      axios
-        .get(`${import.meta.env.VITE_REACT_APP_API_URL}/user/${userId}`)
-        .then((response) => {
-          const userData = response.data.data[0];
-          setData(userData);
-          setPreviewImage(userData.image_profile);
-        })
-        .catch((error) => {
-          console.error("Error fetching data:", error);
-        });
-    }
+    axios
+      .get(`${import.meta.env.VITE_REACT_APP_API_URL}/user/${userId}`)
+      .then((response) => {
+        const userData = response.data.data[0];
+        setData(userData);
+        setPreviewImage(userData.image_profile);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   }, [userId]);
 
   const handleChange = (e) => {
-    setData({
-      ...data,
+    setData((prevData) => ({
+      ...prevData,
       [e.target.name]: e.target.value,
-    });
+    }));
   };
 
-  const handleFileChange = (event) => {
-    const selectedFile = event.target.files[0];
-    setData({
-      ...data,
-      image_profile: selectedFile,
-    });
-
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      setPreviewImage(reader.result);
-    };
-
-    if (selectedFile) {
-      reader.readAsDataURL(selectedFile);
-    } else {
-      setPreviewImage("");
-    }
-  };
-
-  const handleSubmit = async (event) => {
+  const handleSubmitUserData = async (event) => {
     event.preventDefault();
+
     const formDataToSend = new FormData();
-    formDataToSend.append("username", data.username);
-    formDataToSend.append("email", data.email);
-    formDataToSend.append("phone", data.phone);
-    formDataToSend.append("image_profile", data.image_profile);
+    formDataToSend.set("username", data.username);
+    formDataToSend.set("email", data.email);
+    formDataToSend.set("phone", data.phone);
+
     try {
       const response = await axios.put(
-        `${import.meta.env.VITE_REACT_APP_API_URL}/user/${userId}`,
+        `${
+          import.meta.env.VITE_REACT_APP_API_URL
+        }/user/${userId}/updateUserData`,
         formDataToSend
       );
+      console.log("Update successful", response);
       Swal.fire({
         icon: "success",
         title: "Update Successful",
       });
-      console.log("Update successful", response);
     } catch (error) {
       console.error("Update User Error:", error.response.data);
       if (error.message && error.response.data && error.response.data.error) {
@@ -90,7 +68,6 @@ const User = () => {
       }
     }
   };
-
   return (
     <>
       <NavbarLogin />
@@ -120,17 +97,16 @@ const User = () => {
                     <div className="p-3 text-white">
                       <form>
                         <div className="form-group">
-                          <label htmlFor="storeName" className="text-dark">
+                          <label htmlFor="username" className="text-dark">
                             Username
                           </label>
                           <input
                             type="text"
                             className="form-control"
-                            id="storeName"
+                            id="username"
                             name="username"
-                            placeholder="Enter Username"
-                            onChange={handleChange}
                             value={data.username}
+                            onChange={handleChange}
                           />
                         </div>
                         <div className="form-group">
@@ -142,9 +118,8 @@ const User = () => {
                             className="form-control"
                             id="email"
                             name="email"
-                            placeholder="Enter email"
-                            onChange={handleChange}
                             value={data.email}
+                            onChange={handleChange}
                           />
                         </div>
                         <div className="form-group">
@@ -154,17 +129,18 @@ const User = () => {
                           <input
                             type="tel"
                             className="form-control"
-                            id="phoneNumber"
+                            id="phone"
                             name="phone"
-                            placeholder="Enter phone number"
-                            onChange={handleChange}
                             value={data.phone}
+                            onChange={handleChange}
                           />
                         </div>
                         <button
                           type="submit"
                           className="btn mt-5"
-                          onClick={handleSubmit}
+                          id="submit"
+                          name="submit"
+                          onClick={handleSubmitUserData}
                           style={{
                             backgroundColor: "#009393",
                             borderRadius: 25,
@@ -191,23 +167,13 @@ const User = () => {
                       <div className="form-group">
                         <label
                           htmlFor="fileInput"
-                          className="btn"
+                          className="upload-btn"
                           style={{
-                            width: "140px",
-                            border: "1px solid",
-                            borderRadius: 25,
                             color: "#9B9B9B",
                             marginTop: 20,
                           }}
                         >
-                          Select image
-                          <input
-                            type="file"
-                            id="fileInput"
-                            className="form-control-file file"
-                            style={{ display: "none" }}
-                            onChange={handleFileChange}
-                          />
+                          <ModalUploadUserImage/>
                         </label>
                       </div>
                     </div>

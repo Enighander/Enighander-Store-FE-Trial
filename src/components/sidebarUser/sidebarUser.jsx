@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { BiLogOut, BiCart } from "react-icons/bi";
 import { MdAccountBox } from "react-icons/md";
 import { FaRegAddressBook } from "react-icons/fa";
+import { RiLockPasswordLine } from "react-icons/ri";
 import Swal from "sweetalert2";
 import axios from "axios";
 
@@ -88,6 +89,28 @@ const SidebarUser = () => {
               width: 32,
               height: 32,
               borderRadius: "50%",
+              backgroundColor: "#3D4044",
+              color: "white",
+              textAlign: "center",
+              padding: 3,
+            }}
+          >
+            <RiLockPasswordLine />
+          </i>
+          <Link
+            style={{ color: "inherit", textDecoration: "none" }}
+            to={`/profile/user/change-password`}
+          >
+            <h6>Change Password</h6>
+          </Link>
+        </div>
+        <div className="d-flex align-items-center mt-3">
+          <i
+            className="bi bi-box mr-3"
+            style={{
+              width: 32,
+              height: 32,
+              borderRadius: "50%",
               backgroundColor: "#F36F45",
               color: "white",
               textAlign: "center",
@@ -118,6 +141,7 @@ const SidebarUser = () => {
           >
             <BiCart />
           </i>
+          
           <Link
             style={{ color: "inherit", textDecoration: "none" }}
             to={`/profile/user/my-order`}

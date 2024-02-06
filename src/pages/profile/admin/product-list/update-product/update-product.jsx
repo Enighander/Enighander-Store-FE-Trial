@@ -87,7 +87,6 @@ const UpdateProduct = () => {
           icon: "success",
           title: "Product updated successfully!",
         });
-
         console.log("Product updated successfully!", response);
       } catch (error) {
         console.log("Error updating product:", error);

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/Brand.jpg";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -14,13 +14,22 @@ const Login = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
-      // Clear any previous user data from localStorage
       localStorage.clear();
       navigate("/home");
     }
   }, [navigate]);
 
-  const handleUserLogin = async () => {
+  const handleUserLogin = async (e) => {
+    e.preventDefault();
+    // if (!email || !password) {
+    //   Swal.fire({
+    //     icon: "error",
+    //     title: "Validation Error",
+    //     text: "Please enter email and password in required fields.",
+    //   });
+    //   return;
+    // }
+    
     try {
       const response = await axios.post(
         `${import.meta.env.VITE_REACT_APP_API_URL}/user/login`,
@@ -37,25 +46,24 @@ const Login = () => {
         title: "Login Successful",
       });
       navigate("/home");
-      console.log("Login Successful: User ID:", response.data.data.id);
     } catch (error) {
-      if (error.response) {
+      console.error("register error:", error.response.data);
+      if (error.response && error.response.data && error.response.data.error) {
+        const errorMessage = error.response.data.error;
         Swal.fire({
           icon: "error",
-          title: "Login Error",
-          text: error.response.data.message,
+          title: "Format Error",
+          text: errorMessage,
         });
-        console.error("Login Error:", error.response.data);
       } else {
         Swal.fire({
           icon: "error",
           title: "Login Error",
-          text: "An error occurred while processing your request. please try again later.",
+          text: "An error occurred during Login. Please try again later.",
         });
-        console.error("Login error:", error);
       }
     }
-  };
+};
 
   const pageStyles = {
     background: "#FAFAFA",
@@ -84,7 +92,7 @@ const Login = () => {
                   Please enter your account details
                 </p>
                 <form>
-                  <div className="form-group">
+                  <div className="form-group"> 
                     <label htmlFor="email">Email</label>
                     <input
                       type="email"

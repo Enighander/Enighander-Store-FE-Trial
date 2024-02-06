@@ -19,6 +19,7 @@ import UpdateProduct from "../../pages/profile/admin/product-list/update-product
 import OrderList from "../../pages/profile/admin/order-list/order-list.jsx";
 import MyOrderUser from "../../pages/profile/user/my-order-user/my-order-user.jsx";
 import DiscountProduct from "../../pages/discountProduct/discountProduct.jsx";
+import ChangePassword from "../../pages/profile/user/change-password/change-password.jsx";
 
 const Router = () => {
   return (
@@ -47,6 +48,7 @@ const Router = () => {
           <Route path="/profile/user/:id" element={<User />} />
           <Route path="/profile/user/shipping-address" element={<ShippingAddress />} />
           <Route path="/profile/user/my-order" element={<MyOrderUser />} />
+          <Route path="/profile/user/change-password" element={<ChangePassword/>} />
         </Routes>
       </BrowserRouter>
     </>

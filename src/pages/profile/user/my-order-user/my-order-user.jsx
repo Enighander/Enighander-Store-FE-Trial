@@ -1,6 +1,6 @@
+import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
 import NavbarLogin from "../../../../components/navbarLogin";
 import SidebarUser from "../../../../components/sidebarUser/sidebarUser";
 import { Link } from "react-router-dom";
@@ -188,7 +188,7 @@ const MyOrderUser = () => {
                     aria-controls="pills-paid"
                     aria-selected="false"
                   >
-                    Not yet paid
+                    Pending
                   </button>
                 </li>
                 <li className="nav-item" role="presentation">
