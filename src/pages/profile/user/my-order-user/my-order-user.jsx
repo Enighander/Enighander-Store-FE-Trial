@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import NavbarLogin from "../../../../components/navbarLogin";
 import SidebarUser from "../../../../components/sidebarUser/sidebarUser";
+import ModalInvoice from "../../../../components/modalInvoice/modal-invoice";
 import { Link } from "react-router-dom";
 
 const MyOrderUser = () => {
@@ -348,16 +349,16 @@ const MyOrderUser = () => {
                             style={{ color: "inherit", textDecoration: "none" }}
                           >
                             <button
-                              className="btn bg-success mr-3"
+                              className="btn bg-success mr-2"
                               style={{
                                 color: "white",
                               }}
                             >
-                              <i class="bi bi-cart"></i>
                               <h6>Payment</h6>
                             </button>
                           </Link>
                         </div>
+                          <ModalInvoice/>
                       </div>
                     </div>
                   ))}

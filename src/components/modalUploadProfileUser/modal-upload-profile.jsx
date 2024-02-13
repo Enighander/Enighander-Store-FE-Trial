@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import AvatarEditor from "react-avatar-editor";
 import axios from "axios";
 import Modal from "react-bootstrap/Modal";

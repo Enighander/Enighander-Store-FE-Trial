@@ -7,7 +7,7 @@ import { SlArrowRight } from "react-icons/sl";
 const CardComponent = () => {
   const [products, setProduct] = useState([]);
   const [currentPage] = useState(1);
-  const itemsPerPage = 6;
+  const itemsPerPage = 8;
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
 

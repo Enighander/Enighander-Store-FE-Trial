@@ -1,0 +1,744 @@
+.invoice-6 {
+  width: 100%;
+  position: relative;
+  background-color: #f9fafc;
+  overflow: hidden;
+  align-items: center;
+  padding: 32px 40px 30px 25px;
+  box-sizing: border-box;
+  gap: 200px;
+  letter-spacing: normal;
+}
+.recipient-data {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+  min-width: 97px;
+}
+.recipient-data1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px 0px 4px;
+  box-sizing: border-box;
+  min-width: 97px;
+}
+
+.address-field {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+.vector-pair {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 px;
+  text-align: left;
+  font-size: 10px;
+  color: #1a1c21;
+  font-family: Inter;
+}
+
+.header {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 2;
+}
+
+.outer-frame {
+  align-items: stretch;
+  flex-direction: row;
+  padding: 0 0 0 15px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 28px;
+  color: #1a1c21;
+}
+
+.brand-icon {
+  height: 33px;
+  width: 122px;
+  position: relative;
+  object-fit: cover;
+  z-index: 2;
+}
+.invoice-details {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.recipient-data {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+  min-width: 97px;
+}
+
+.address-field {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+.noise-icon {
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.noise-icon,
+.noise-icon1,
+.noise-parent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.noise-icon1 {
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+.noise-parent {
+  margin: 0 !important;
+}
+
+.order-id {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  line-height: 16px;
+  font-weight: 500;
+  color: #5e6470;
+}
+.header {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 2;
+}
+.invoice-details {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.header-section,
+.outer-frame {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.header-section {
+  flex: 1;
+  flex-direction: column;
+  gap: 32px;
+}
+.outer-frame {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 0 0 15px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 28px;
+  color: #1a1c21;
+  font-family: Inter;
+}
+.icon1 {
+  height: 10px;
+  width: 10px;
+  position: relative;
+}
+.icon {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2px 0;
+  z-index: 2;
+}
+.payment-reminder,
+.thank-you-message {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.payment-reminder {
+  align-self: stretch;
+  flex-direction: row;
+  gap: 6px;
+}
+.thank-you-message {
+  width: 255px;
+  flex-direction: column;
+  gap: 4px;
+}
+.frame-child {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 2;
+}
+.invoice-footer-inner,
+.thank-you-message-parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.thank-you-message-parent {
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+}
+.invoice-footer-inner {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 0 0 15px;
+  box-sizing: border-box;
+}
+.firrbookmark-icon {
+  height: 12px;
+  width: 0.5px;
+  position: relative;
+  z-index: 2;
+}
+.firrbookmark-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  color: #5e6470;
+}
+.invoice-6,
+.invoice-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.invoice-footer {
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 34px;
+  max-width: 100%;
+  text-align: left;
+  font-size: 10px;
+  color: #1a1c21;
+  font-family: Inter;
+}
+.address-field {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 6px;
+}
+.footer-frame {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 6px;
+}
+.recipient-data {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+  min-width: 97px;
+}
+.recipient-data-icon {
+  align-self: stretch;
+  width: 0.5px;
+  position: relative;
+  max-height: 100%;
+  min-height: 112px;
+  z-index: 3;
+}
+.recipient-name {
+  position: relative;
+  line-height: 14px;
+  font-weight: 600;
+  z-index: 2;
+}
+.address-city-postal-code-container {
+  align-self: stretch;
+  position: relative;
+  line-height: 14px;
+  z-index: 2;
+}
+.recipient-name-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2px;
+  color: #5e6470;
+}
+.billed-to-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 6px;
+}
+.recipient-data1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px 0px 4px;
+  box-sizing: border-box;
+  min-width: 97px;
+}
+.recipient-data-icon1 {
+  align-self: stretch;
+  width: 0.5px;
+  position: relative;
+  max-height: 100%;
+  min-height: 112px;
+  z-index: 3;
+}
+.jl-cendana-barat-container {
+  align-self: stretch;
+  position: relative;
+  line-height: 14px;
+  z-index: 2;
+}
+.from-enigh-store-inc {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.itemsframe {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 8px 0px 0px;
+  box-sizing: border-box;
+  min-width: 98px;
+  color: #5e6470;
+}
+.date-frames {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.vector-pair-item {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 2;
+}
+.vector-pair {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px 0px 8px;
+  text-align: left;
+  font-size: 10px;
+  color: #1a1c21;
+  font-family: Inter;
+}
+.items {
+  position: relative;
+  line-height: 14px;
+  font-weight: 600;
+  z-index: 2;
+}
+.qty {
+  position: relative;
+  line-height: 14px;
+  font-weight: 600;
+  z-index: 2;
+}
+.line-total {
+  flex: 1;
+  position: relative;
+  line-height: 14px;
+  font-weight: 600;
+  z-index: 2;
+}
+.taxframe {
+  width: 135px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 68px;
+  text-align: right;
+}
+.qtylineframe {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.desktopbuttons-icon {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 2;
+}
+.geforce-rtx-4070 {
+  position: relative;
+  line-height: 14px;
+  font-weight: 600;
+  z-index: 2;
+}
+.gb-gddr6x {
+  position: relative;
+  line-height: 14px;
+  color: #5e6470;
+  z-index: 2;
+}
+.productnames {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.geforce-rtx-4080 {
+  position: relative;
+  line-height: 14px;
+  font-weight: 600;
+  z-index: 2;
+}
+.gb-gddr6x1 {
+  position: relative;
+  line-height: 14px;
+  color: #5e6470;
+  z-index: 2;
+}
+.productnames1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.ge-force-r-t-xframes {
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 14px;
+}
+.paymentsymbolframe {
+  position: relative;
+  line-height: 14px;
+  font-weight: 500;
+  z-index: 2;
+}
+.rp {
+  position: relative;
+  line-height: 14px;
+  font-weight: 500;
+  z-index: 2;
+}
+.payment-info {
+  position: relative;
+  line-height: 14px;
+  font-weight: 500;
+  z-index: 2;
+}
+.daystopayframe {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1px;
+}
+.amountdueframe {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.div {
+  position: relative;
+  line-height: 14px;
+  font-weight: 500;
+  z-index: 2;
+}
+.rp1 {
+  position: relative;
+  line-height: 14px;
+  font-weight: 500;
+  z-index: 2;
+}
+.div1 {
+  position: relative;
+  line-height: 14px;
+  font-weight: 500;
+  z-index: 2;
+}
+.rp-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1px;
+}
+.amountdueframe1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.rpframes {
+  width: 102px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 32px;
+  text-align: right;
+  color: #5e6470;
+}
+.productnameframes {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.home-icon {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 2;
+}
+.subtotal {
+  position: relative;
+  line-height: 14px;
+  font-weight: 600;
+  z-index: 2;
+}
+.rp2 {
+  position: relative;
+  line-height: 14px;
+  font-weight: 500;
+  z-index: 2;
+}
+.div2 {
+  position: relative;
+  line-height: 14px;
+  font-weight: 500;
+  z-index: 2;
+}
+.rp-group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1px;
+  text-align: right;
+  color: #5e6470;
+}
+.qtylineframe1 {
+  width: 201px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.cta-icon {
+  width: 203px;
+  height: 0.5px;
+  position: relative;
+  z-index: 2;
+}
+.tax-0 {
+  position: relative;
+  line-height: 14px;
+  font-weight: 600;
+  z-index: 2;
+}
+.div3 {
+  position: relative;
+  line-height: 14px;
+  font-weight: 500;
+  z-index: 2;
+}
+.div4 {
+  position: relative;
+  line-height: 14px;
+  font-weight: 500;
+  z-index: 2;
+}
+.parent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3px;
+  text-align: right;
+  color: #5e6470;
+}
+.qtylineframe2 {
+  width: 201px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.firrhome-icon {
+  width: 203px;
+  height: 0.5px;
+  position: relative;
+  z-index: 2;
+}
+.rp-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1px;
+  text-align: right;
+}
+.qtylineframe3 {
+  width: 201px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.frame-div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2px;
+  text-align: right;
+}
+.due1 {
+  width: 203px;
+  border-top: 1.5px solid #009393;
+  border-bottom: 1.5px solid #009393;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px 0px;
+  gap: 20px;
+  z-index: 2;
+  color: #009393;
+}
+.subtotalframe {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 10px;
+  text-align: left;
+  font-size: 10px;
+  color: #1a1c21;
+  font-family: Inter;
+}
+
+@media screen and (max-width: 450px) {
+  .productnameframes {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .header-section {
+    gap: 32px;
+  }
+  .invoice-footer {
+    gap: 34px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .invoice {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .invoice-details {
+    flex-wrap: wrap;
+  }
+  .invoice-6 {
+    gap: 200px;
+  }
+}
