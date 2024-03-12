@@ -5,6 +5,7 @@ import CarouselComponent from "../../components/carousel/carousel.jsx";
 import CategoryComponent from "../../components/category/category.jsx";
 import CardComponent from "../../components/card/card.jsx";
 import DiscountCard from "../../components/discountCard/discountCard.jsx";
+import FooterComponents from "../../components/footer/footer.jsx"
 
 const Home = () => {
   const [showNavbarLogin, setShowNavbarLogin] = useState(false);
@@ -26,6 +27,7 @@ const Home = () => {
         <CategoryComponent />
         <CardComponent />
         <DiscountCard />
+        <FooterComponents/>
       </div>
     </div>
   );
